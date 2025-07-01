@@ -147,7 +147,24 @@ From #PercentPopulationVaccinated
 
 --Creating view to store data for later visualisations
 
-Create view PercentPopulationVaccinated as
+--Create view PercentPopulationVaccinated as
+--Select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations,
+--SUM(cast(vac.new_vaccinations as int)) over (partition by dea.Location order by dea.location, dea.Date)
+--as RollingPeopleVaccinated
+--From NewPortfolioProject..CovidDeaths dea
+--Join NewPortfolioProject..CovidVaccinations vac
+--	on dea.location = vac.location
+--	and dea.date = vac.date
+--where dea.continent is not null
+----order by 2,3
+
+
+--Select*
+--From PercentPopulationVaccinated
+
+
+Go
+Alter view PercentPopulationVaccinated as
 Select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations,
 SUM(cast(vac.new_vaccinations as int)) over (partition by dea.Location order by dea.location, dea.Date)
 as RollingPeopleVaccinated
@@ -157,7 +174,7 @@ Join NewPortfolioProject..CovidVaccinations vac
 	and dea.date = vac.date
 where dea.continent is not null
 --order by 2,3
-
+Go
 
 Select*
 From PercentPopulationVaccinated
