@@ -1,28 +1,22 @@
-COVID-19 DATA EXPLORATION WITH SQL
-
-THIS REPOSITORY CONTAINS AN END-TO-END DATA EXPLORATION PROJECT ON A COVID-19 DATASET, FOCUSED ON UTILISING SQL FOR DATA CLEANING, MANIPULATION, AND ANALYSIS. THIS PROJECT IS A FOUNDATIONAL PIECE IN MY DATA ANALYST PORTFOLIO, DEMONSTRATING KEY SKILLS IN PREPARING AND QUERYING DATA FOR ACTIONABLE INSIGHTS AND SUBSEQUENT VISUALISATION. FOR AN INTERACTIVE DEMO AND FULL PROJECT DETAILS, VISIT THE [**LIVE PROJECT DEMO**](index.html).
-
-
-KEY SKILLS AND TECHNIQUES
-DATA CLEANING & MANIPULATION: PREPARING RAW DATA BY HANDLING NULL VALUES, CASTING DATA TYPES, AND USING IF STATEMENTS TO CATEGORISE DATA.
-SQL QUERYING: USING SELECT, WHERE, GROUP BY, AND ORDER BY CLAUSES TO EXPLORE AND ANALYSE DATA.
-
-ADVANCED SQL CONCEPTS:
-JOINS: MERGING MULTIPLE DATASETS TO CREATE A COMPREHENSIVE VIEW.
-WINDOW FUNCTIONS: CREATING ROLLING COUNTS FOR CUMULATIVE ANALYSIS.
-COMMON TABLE EXPRESSIONS (CTES): SIMPLIFYING COMPLEX QUERIES FOR READABILITY AND EFFICIENCY.
-TEMPORARY TABLES & VIEWS: STORING AND REUSING QUERY RESULTS FOR FURTHER ANALYSIS OR VISUALISATION.
-DATA-DRIVEN INSIGHTS: CALCULATING KEY METRICS SUCH AS INFECTION AND DEATH PERCENTAGES AND IDENTIFYING TOTAL CASES AND DEATHS BY LOCATION.
-
-TOOLS USED
-SQL SERVER: FOR QUERYING AND DATA MANIPULATION.
-MICROSOFT EXCEL: FOR INITIAL DATA REFORMATTING AND PREPARATION.
-
-PROJECT STATUS
-THIS PROJECT IS A COMPLETED PORTFOLIO PIECE. THE SQL SCRIPT IS INCLUDED IN THIS REPOSITORY.
-
-HOW TO USE
-TO REPLICATE THIS PROJECT, YOU WOULD:
-DOWNLOAD THE RAW DATA AND PERFORM INITIAL CLEANING IN EXCEL.
-IMPORT THE DATA INTO A SQL DATABASE.
-EXECUTE THE PROVIDED SQL SCRIPT TO PERFORM THE ANALYSIS.
+COVID-19 Data Exploration with SQL
+This repository contains an end-to-end data exploration project on a COVID-19 dataset, focused on utilising SQL for data cleaning, manipulation, and analysis. This project is a foundational piece in my data analyst portfolio, demonstrating key skills in preparing and querying data for actionable insights and subsequent visualisation.
+For an interactive demo and full project details, visit the Live Project Demo.
+Key Skills and Techniques
+Data Cleaning & Manipulation: Preparing raw data by handling null values, casting data types, and using if statements to categorise data.
+SQL Querying: Using SELECT, WHERE, GROUP BY, and ORDER BY clauses to explore and analyse data.
+Advanced SQL Concepts:
+Joins: Merging multiple datasets to create a comprehensive view.
+Window Functions: Creating rolling counts for cumulative analysis.
+Common Table Expressions (CTEs): Simplifying complex queries for readability and efficiency.
+Temporary Tables & Views: Storing and reusing query results for further analysis or visualisation.
+Data-Driven Insights: Calculating key metrics such as infection and death percentages, and identifying total cases and deaths by location.
+Tools Used
+SQL Server: For querying and data manipulation.
+Microsoft Excel: For initial data reformatting and preparation.
+Project Status
+This project is a completed portfolio piece. The SQL script is included in this repository.
+How to Use
+To replicate this project, you would:
+Download the raw data and perform initial cleaning in Excel.
+Import the data into a SQL database.
+Execute the provided SQL script to perform the analysis.
