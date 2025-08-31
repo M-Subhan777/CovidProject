@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project README</title>
+    <!-- Use Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+    <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-xl p-6 sm:p-10 border border-gray-200">
+        <!-- Project Title -->
+        <div class="border-b-2 border-gray-200 pb-4 mb-6">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">COVID-19 Data Exploration with SQL</h1>
+            <p class="text-gray-600 text-lg">
+                This repository contains an end-to-end data exploration project on a COVID-19 dataset, focused on utilizing SQL for data cleaning, manipulation, and analysis.
+            </p>
+        </div>
+
+        <!-- Dynamic Visualization Section -->
+        <div class="my-8 text-center">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Analytical Insights Showcase</h2>
+            <p class="text-gray-500 mb-6">
+                This sample visualization represents the type of analytical insights derived from the SQL queries in this project.
+            </p>
+            <div class="bg-gray-100 rounded-lg p-4 shadow-inner">
+                <canvas id="myChart" class="w-full max-h-[400px]"></canvas>
+            </div>
+            <button id="generateChartBtn" class="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300">
+                Generate Sample Chart
+            </button>
+        </div>
+
+        <!-- Skills and Features Section -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Key Skills and Techniques</h2>
+            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                <li>*Data Cleaning & Manipulation:* Preparing raw data by handling null values, casting data types, and using if statements to categorize data.</li>
+                <li>*SQL Querying:* Using SELECT, WHERE, GROUP BY, and ORDER BY clauses to explore and analyze data.</li>
+                <li>*Advanced SQL Concepts:*
+                    <ul class="list-circle list-inside ml-6 space-y-1">
+                        <li>*Joins:* Merging multiple datasets to create a comprehensive view.</li>
+                        <li>*Window Functions:* Creating rolling counts for cumulative analysis.</li>
+                        <li>*Common Table Expressions (CTEs):* Simplifying complex queries for readability and efficiency.</li>
+                        <li>*Temporary Tables & Views:* Storing and reusing query results for further analysis or visualization.</li>
+                    </ul>
+                </li>
+                <li>*Data-Driven Insights:* Calculating key metrics such as infection and death percentages, and identifying total cases and deaths by location.</li>
+            </ul>
+        </div>
+
+        <!-- Tools Used Section -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Tools Used</h2>
+            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                <li>*SQL Server:* For querying and data manipulation.</li>
+                <li>*Microsoft Excel:* For initial data reformatting and preparation.</li>
+            </ul>
+        </div>
+
+        <!-- Project Status Section -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Project Status</h2>
+            <p class="text-gray-700">
+                This project is a completed portfolio piece. The SQL script is included in this repository.
+            </p>
+        </div>
+
+        <!-- How to Use Section -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">How to Use</h2>
+            <p class="text-gray-700">To replicate this project, you would:</p>
+            <ol class="list-decimal list-inside space-y-2 text-gray-700 mt-2">
+                <li>Download the raw data and perform initial cleaning in Excel.</li>
+                <li>Import the data into a SQL database.</li>
+                <li>Execute the provided SQL script to perform the analysis.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Chart.js and custom JavaScript for the canvas -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const generateChartBtn = document.getElementById('generateChartBtn');
+        const canvas = document.getElementById('myChart');
+        let myChart = null;
+
+        // Function to destroy and re-create the chart
+        const createChart = () => {
+            // Destroy any existing chart instance to prevent conflicts
+            if (myChart) {
+                myChart.destroy();
+            }
+
+            // Mock data representing a simplified analysis
+            const data = {
+                labels: ['January', 'February', 'March', 'April', 'May'],
+                datasets: [{
+                    label: 'New Cases per Month',
+                    data: [12000, 19000, 30000, 25000, 28000],
+                    backgroundColor: 'rgba(59, 130, 246, 0.5)', // blue-500 with opacity
+                    borderColor: 'rgb(59, 130, 246)',
+                    borderWidth: 1,
+                    tension: 0.3,
+                    fill: true,
+                }]
+            };
+
+            // Configuration options for the chart
+            const config = {
+                type: 'line',
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                color: '#4b5563',
+                                font: {
+                                    size: 14,
+                                    family: 'Inter'
+                                }
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Sample: New COVID-19 Cases Over Time',
+                            font: {
+                                size: 18,
+                                family: 'Inter',
+                                weight: 'bold'
+                            },
+                            color: '#1f2937'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#e5e7eb'
+                            },
+                            ticks: {
+                                color: '#4b5563',
+                                font: {
+                                    family: 'Inter'
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: '#e5e7eb'
+                            },
+                            ticks: {
+                                color: '#4b5563',
+                                font: {
+                                    family: 'Inter'
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+
+            // Create the new chart instance
+            myChart = new Chart(canvas, config);
+        };
+
+        // Attach event listener to the button
+        generateChartBtn.addEventListener('click', createChart);
+
+        // Initial chart generation on page load
+        window.onload = createChart;
+    </script>
+</body>
+</html>
