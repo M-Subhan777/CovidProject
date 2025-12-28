@@ -10,12 +10,18 @@ I used two main tables for this analysis:
   2.	CovidVaccinations: This tracks the testing and immunisation metrics. Timeframe: January 2020 – Early 2021
 
 The SQL Toolkit
+
 I used a variety of techniques to get the results I needed, including:
-  •	Joins: Linking the deaths and vaccinations tables by date and location.
-  •	Window Functions: Specifically using PARTITION BY to build rolling totals for vaccinations.
-  •	CTEs and Temp Tables: Essential for breaking down complex calculations into manageable steps.
-  •	Views: I saved the final queries as views so they could be pulled directly into visualisation software.
-  •	Data Typing: Utilised CAST and CONVERT to make sure math operations worked on the raw string data.
+
+•	Joins: Linking the deaths and vaccinations tables by date and location.
+
+•	Window Functions: Specifically using PARTITION BY to build rolling totals for vaccinations.
+
+•	CTEs and Temp Tables: Essential for breaking down complex calculations into manageable steps.
+
+•	Views: I saved the final queries as views so they could be pulled directly into visualisation software.
+
+•	Data Typing: Utilised CAST and CONVERT to make sure math operations worked on the raw string data.
 
 What I was looking for
   1. Mortality Probability I calculated the death percentage by comparing total deaths to total cases. This shows the likelihood of dying if you contracted COVID-19 in a specific country at a specific point in time.
