@@ -65,3 +65,5 @@ The final stage of this project involved connecting the cleaned SQL views to Tab
 * **Live Dashboard:** [View Interactive Tableau Dashboard](https://public.tableau.com/views/CovidDashboard_17481732791280/Dashboard1?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 * **Key Metrics:** Infection rates, mortality probability by country, and global vaccination trends.
 
+<img width="1464" height="774" alt="Tableau Dashboard " src="https://github.com/user-attachments/assets/8fa99a55-3a1d-420e-82f0-674f0349eefa" />
+
