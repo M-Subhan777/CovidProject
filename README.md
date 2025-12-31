@@ -58,3 +58,10 @@ MICROSOFT EXCEL: FOR INITIAL DATA REFORMATTING AND PREPARATION.
 PROJECT STATUS
 THIS PROJECT IS A COMPLETED PORTFOLIO PIECE. THE SQL SCRIPT IS INCLUDED IN THIS REPOSITORY.
 
+
+## 📊 Data Visualisation
+The final stage of this project involved connecting the cleaned SQL views to Tableau to create an interactive dashboard.
+
+* **Live Dashboard:** [View Interactive Tableau Dashboard](https://public.tableau.com/views/CovidDashboard_17481732791280/Dashboard1?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+* **Key Metrics:** Infection rates, mortality probability by country, and global vaccination trends.
+
